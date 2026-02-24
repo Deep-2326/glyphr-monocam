@@ -65,7 +65,7 @@ The interface is designed to resemble a professional cinematic monitor rather th
 No frameworks or UI libraries were used.
 
 
-
+```
 ## Project Structure
 
 glyphr-monocam/
@@ -88,7 +88,7 @@ glyphr-monocam/
 │
 ├── README.md
 └── LICENSE
-
+```
 
 
 ## Running Locally
