@@ -135,4 +135,4 @@ The application will be available at:
 ## Author
 
 Deep Vashishta
-GitHub: [https://github.com/Deep-2326](https://github.com/Deep-2326)
+GitHub: https://github.com/Deep-2326
