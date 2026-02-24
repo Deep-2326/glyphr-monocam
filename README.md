@@ -1,5 +1,7 @@
 # GLYPHR MONOCAM
 
+[Live Demo](https://deep-2326.github.io/glyphr-monocam/)
+
 A Cinematic Real-Time ASCII Live Monitor
 
 GLYPHR MONOCAM is a browser-based real-time ASCII camera that transforms live webcam input into cinematic ASCII output. It integrates MediaPipe segmentation for background removal and includes photo and video recording capabilities, all built using vanilla JavaScript and native browser APIs.
