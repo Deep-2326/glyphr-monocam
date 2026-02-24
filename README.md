@@ -138,5 +138,3 @@ Deep Vashishta
 GitHub: [https://github.com/Deep-2326](https://github.com/Deep-2326)
 
 
-
-If you’d like, I can now help you refine your resume bullet points so this project sounds strong and technical without exaggeration.
