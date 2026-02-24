@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Glyphr Monocam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js"></script>
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body class="theme-dark">
+  <main id="app-shell">
+    <header id="top-bar">
+      <div class="brand-tag">GLYPHR MONOCAM</div>
+      <div class="osd-row">
+        <div class="osd-item rec-pill" id="recIndicator">
+          <span class="rec-dot" aria-hidden="true"></span>
+          <span class="rec-text">REC</span>
+        </div>
+        <div class="osd-item frame-label">FRAME 01 / LIVE</div>
+        <div class="osd-item clock-label" id="clockDisplay">00:00:00</div>
+        <div class="osd-item sr-only" id="batteryDisplay" aria-hidden="true">BAT --%</div>
+      </div>
+    </header>
+
+    <section id="viewfinder" aria-label="ASCII camera viewfinder">
+      <video id="video" autoplay playsinline muted hidden></video>
+      <canvas id="frameCanvas" hidden></canvas>
+
+      <pre id="asciiOutput"></pre>
+
+      <div class="cinema-overlay letterbox-overlay" aria-hidden="true"></div>
+      <div class="cinema-overlay grain-overlay" aria-hidden="true"></div>
+      <div class="cinema-overlay scan-overlay" aria-hidden="true"></div>
+      <div class="viewfinder-overlay" aria-hidden="true">
+        <div class="focus-box"></div>
+      </div>
+    </section>
+
+    <section id="control-deck" aria-label="Camera controls">
+      <div class="cluster left">
+        <select id="palette" class="control" aria-label="ASCII palette">
+          <option value="extended" selected>Extended</option>
+          <option value="basic">Basic</option>
+          <option value="blocks">Blocks</option>
+          <option value="matrix">Matrix</option>
+          <option value="sketch">Sketch</option>
+          <option value="deep">Deep</option>
+          <option value="custom">Custom</option>
+        </select>
+
+        <label class="toggle" id="bgToggleWrap">
+          <input type="checkbox" id="bgToggle" />
+          <span class="toggle-track" aria-hidden="true"></span>
+          <span class="toggle-label">RM BG</span>
+        </label>
+      </div>
+
+      <div class="cluster center">
+        <div class="mode-switch" role="tablist" aria-label="Capture mode">
+          <button id="modePhoto" class="mode-btn is-active" type="button" role="tab" aria-selected="true">PHOTO</button>
+          <button id="modeVideo" class="mode-btn" type="button" role="tab" aria-selected="false">VIDEO</button>
+        </div>
+
+        <button id="shutterBtn" type="button" aria-label="Capture" title="Capture photo">
+          <span id="shutterInner"></span>
+        </button>
+      </div>
+
+      <div class="cluster right">
+        <label class="toggle" id="micToggleWrap">
+          <input type="checkbox" id="micToggle" />
+          <span class="toggle-track" aria-hidden="true"></span>
+          <span class="toggle-label">MIC</span>
+        </label>
+
+        <label id="resWrap" class="control-inline" for="resSlider">
+          <span>RES</span>
+          <input id="resSlider" type="range" min="10" max="60" step="10" value="30" />
+        </label>
+
+        <button id="themeBtn" class="control" type="button" title="Cycle theme">DARK</button>
+
+        <button id="switchCamBtn" class="control icon-btn" type="button" title="Switch camera" aria-label="Switch camera">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M23 4v6h-6"></path>
+            <path d="M1 20v-6h6"></path>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"></path>
+            <path d="M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div id="statusToast" role="status" aria-live="polite"></div>
+  <div id="flashOverlay" aria-hidden="true"></div>
+</body>
+</html>
