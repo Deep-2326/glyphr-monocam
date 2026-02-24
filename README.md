@@ -18,6 +18,29 @@ This project converts each frame from the webcam into ASCII characters by calcul
 The interface is designed to resemble a professional cinematic monitor rather than a traditional ASCII terminal tool.
 
 
+## About The Project
+
+Glyphr Monocam is a browser-based cinematic ASCII camera that transforms real-time webcam input into stylized character-based visuals.
+
+The project explores how computer vision and low-level browser APIs can be combined to create a visually expressive, performance-conscious rendering pipeline entirely on the client side.
+
+Instead of treating ASCII rendering as a novelty filter, this implementation focuses on:
+
+- Real-time luminance mapping using Canvas pixel data  
+- Background segmentation using MediaPipe Selfie Segmentation  
+- WebGL acceleration via WebAssembly  
+- Responsive cinematic UI design inspired by film monitor systems  
+
+The goal of this project was to understand how modern browsers handle:
+
+- Real-time video processing  
+- WebAssembly-based ML models  
+- Media stream recording  
+- Performance tradeoffs in high-frequency rendering loops  
+
+All logic runs fully client-side with no backend dependencies.
+
+
 
 ## Features
 
