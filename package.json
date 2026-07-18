@@ -1,0 +1,15 @@
+{
+  "name": "glyphr-monocam",
+  "version": "0.1.0",
+  "description": "A browser-based real-time ASCII camera powered by MediaPipe Selfie Segmentation.",
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/asciiEngine.js && node --check src/camera.js && node --check src/main.js && node --check src/palettes.js && node --check src/recorder.js && node --check src/segmentation.js && node --check src/themes.js && node --check src/ui.js && node --check tools/render-pdf.mjs",
+    "test": "node --test",
+    "docs:pdf": "node tools/render-pdf.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

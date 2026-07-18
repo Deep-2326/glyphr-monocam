@@ -1,2 +1,12 @@
 .DS_Store
 node_modules/
+coverage/
+playwright-report/
+test-results/
+*.log
+.env
+.env.*
+!.env.example
+interview/
+*.pdf
+assets/branding/deep-vashishta-signature.png
